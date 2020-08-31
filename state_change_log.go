@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/conku/admin"
+	"github.com/conku/audited"
+	"github.com/conku/qor/resource"
+	"github.com/conku/roles"
 	"github.com/jinzhu/gorm"
-	"github.com/qor/admin"
-	"github.com/qor/audited"
-	"github.com/qor/qor/resource"
-	"github.com/qor/roles"
 )
 
 // StateChangeLog a model that used to keep state change logs
@@ -52,7 +52,7 @@ func GetStateChangeLogs(model interface{}, db *gorm.DB) []StateChangeLog {
 func GetLastStateChange(model interface{}, db *gorm.DB) *StateChangeLog {
 	var (
 		changelog StateChangeLog
-		scope      = db.NewScope(model)
+		scope     = db.NewScope(model)
 	)
 
 	db.Where("refer_table = ? AND refer_id = ?", scope.TableName(), GenerateReferenceKey(model, db)).Last(&changelog)

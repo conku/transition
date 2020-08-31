@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/conku/admin"
+	"github.com/conku/qor/resource"
+	"github.com/conku/roles"
 	"github.com/jinzhu/gorm"
-	"github.com/qor/admin"
-	"github.com/qor/qor/resource"
-	"github.com/qor/roles"
 )
 
 // Transition is a struct, embed it in your struct to enable state machine for the struct
