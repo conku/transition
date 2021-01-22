@@ -1,8 +1,8 @@
 # Transition
 
-Transition is a [Golang](http://golang.org/) [*state machine*](https://en.wikipedia.org/wiki/Finite-state_machine) implementation.
+Transition is a [Golang](http://golang.org/) [_state machine_](https://en.wikipedia.org/wiki/Finite-state_machine) implementation.
 
-it can be used standalone, but it integrates nicely with [GORM](https://github.com/jinzhu/gorm) models. When integrated with [GORM](https://github.com/jinzhu/gorm), it will also store state change logs in the database automatically.
+it can be used standalone, but it integrates nicely with [GORM](https://github.com/conku/gorm) models. When integrated with [GORM](https://github.com/conku/gorm), it will also store state change logs in the database automatically.
 
 [![GoDoc](https://godoc.org/github.com/conku/transition?status.svg)](https://godoc.org/github.com/conku/transition)
 
@@ -96,7 +96,7 @@ order.SetState("finished") // this will only update order's state, won't save it
 
 ## State change logs
 
-When working with [GORM](https://github.com/jinzhu/gorm), `Transition` will store all state change logs in the database. Use `GetStateChangeLogs` to get those logs.
+When working with [GORM](https://github.com/conku/gorm), `Transition` will store all state change logs in the database. Use `GetStateChangeLogs` to get those logs.
 
 ```go
 // create the table used to store logs first

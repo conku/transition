@@ -6,9 +6,9 @@ import (
 
 	"github.com/conku/admin"
 	"github.com/conku/audited"
+	"github.com/conku/gorm"
 	"github.com/conku/qor/resource"
 	"github.com/conku/roles"
-	"github.com/jinzhu/gorm"
 )
 
 // StateChangeLog a model that used to keep state change logs

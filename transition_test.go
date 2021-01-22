@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/jinzhu/gorm"
+	"github.com/conku/gorm"
 	_ "github.com/mattn/go-sqlite3"
 
 	"github.com/conku/qor/test/utils"
