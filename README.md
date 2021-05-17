@@ -71,7 +71,7 @@ cancellEvent.To("paid_cancelled").From("paid").After(func(order interface{}, tx 
 
 ```go
 // func (*StateMachine) Trigger(name string, value Stater, tx *gorm.DB, notes ...string) error
-OrderStatemachine.Trigger("paid", &order, db, "charged offline by jinzhu")
+OrderStatemachine.Trigger("paid", &order, db, "charged offline by conku")
 // notes will be used to generate state change logs when works with GORM
 
 // When using without GORM, just pass nil to the db, like
